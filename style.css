@@ -1,0 +1,413 @@
+@font-face {
+  font-family: frankmedium;
+  src: url(./fonts/FrankRuhlLibre-Medium.ttf);
+}
+@font-face {
+  font-family: frank;
+  src: url(./fonts/FrankRuhlLibre-Regular.ttf);
+}
+@font-face {
+  font-family: vibes;
+  src: url(./fonts/GreatVibes-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "frank", "vibes";
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-family: "frank", sans-serif;
+  font-weight: 400;
+}
+li,
+button,
+label,
+input,
+p {
+  font-size: 4rem;
+}
+label {
+  padding-bottom: 3rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  width: 30rem;
+  padding: 1rem 3rem;
+  background: #906272;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+
+button:hover {
+  background: #293a50;
+}
+
+button:focus {
+  background: #263547;
+  outline-style: solid;
+}
+
+#logo {
+  font-family: vibes;
+  color: #3b3b3b;
+  flex: 2 1 40rem;
+  margin-top: 2rem;
+}
+.main-head {
+  background: white;
+  color: #3b3b3b;
+  box-shadow: 2px 2px 2px 1px #e8e8e8;
+}
+nav {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+}
+.nav-links {
+  color: black;
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.nav-links li a {
+  color: #393939;
+}
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.hero-introduction {
+  flex: 1;
+  width: 90%;
+  margin: auto;
+}
+
+#gallerybtn {
+  border: 2px solid black;
+  padding: 1rem 5rem;
+  font-size: 2rem;
+  color: black;
+  -webkit-text-stroke: 1px;
+}
+h2 {
+  color: black;
+  padding: 1rem 0rem;
+  text-decoration-thickness: 0.5rem;
+}
+p {
+  color: #3b3b3b;
+  font-size: 2rem;
+  padding: 4rem 20rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero-images {
+  max-width: 100%;
+  height: auto;
+  background-color: #dad6db;
+  z-index: 1;
+}
+.hero-elena {
+  size: 10rem;
+  height: 80rem;
+  z-index: 2;
+}
+.plant {
+  size: 10rem;
+  height: 60rem;
+  z-index: -1;
+  position: absolute;
+  bottom: 0%;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.plant1 {
+  right: 30%;
+
+  animation: plantAnimation 2s infinite ease-in alternate;
+}
+
+.plant2 {
+  left: 80%;
+
+  animation: plantAnimation 3s infinite ease-in alternate;
+}
+
+@keyframes plantAnimation {
+  from {
+    transform: rotate(-4deg) translate(5%, -5%);
+  }
+  to {
+    transform: rotate(0deg) translate(0%, 0%);
+  }
+}
+
+#about {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+
+  align-items: stretch;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+h5 {
+  position: absolute;
+  left: 16%;
+  top: 20rem;
+  letter-spacing: 2rem;
+  z-index: 1;
+}
+.about-text {
+  display: inline-block;
+
+  flex: 1;
+  width: 90%;
+
+  background-color: #3b3b3b;
+  color: white;
+}
+.about-text h2 {
+  font-family: vibes;
+  color: white;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+.about-text h3 {
+  font-family: frankmedium;
+  position: absolute;
+  margin-bottom: 10rem;
+  margin-left: 6rem;
+}
+.about-text p {
+  color: white;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+  padding-left: 4rem;
+  margin-right: 10rem;
+  margin-top: 10rem;
+  /* text-align: left; */
+  text-align: justify;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px;
+  justify-items: stretch;
+}
+.gallery1 {
+  grid-column: 1/3;
+
+  grid-row: 1/2;
+}
+.gallery2 {
+  grid-column: 3/4;
+
+  grid-row: 1/3;
+}
+.gallery3 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.gallery4 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.contact {
+  display: flex;
+  align-items: stretch;
+}
+.form-wrapper {
+  padding-top: 0rem;
+  margin-top: 0rem;
+  padding-bottom: 0rem;
+  margin-bottom: 0%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30rem;
+  padding-bottom: 3rem;
+
+  padding-top: 0rem;
+  margin-top: 0rem;
+}
+.form-wrapper h2 {
+  flex: 1;
+  padding: 15rem 35rem;
+  margin-bottom: 0rem;
+}
+.form-wrapper span {
+  color: #906272;
+  font-size: 8rem;
+}
+#email {
+  background-color: #414141;
+  width: 30rem;
+  height: 4rem;
+}
+.elena {
+  /* size: 10rem;  */
+  flex: 1;
+
+  height: 70rem;
+}
+/* .about-life{
+  
+} */
+footer {
+  background: #414141;
+  color: white;
+}
+.footer-wrapper {
+  display: flex;
+  padding: 1rem;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 5vh;
+  flex-wrap: wrap;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+footer h4 {
+  flex: 1 1 50rem;
+  font-family: frankmeduim;
+  font-size: 2rem;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  flex: 1 1 30rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 932px) {
+  nav {
+    text-align: center;
+  }
+
+  html {
+    font-size: 48%;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  body {
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
+}
+  .hero {
+    width: 100%;
+  }
+  .hero-introduction {
+    height: 50rem;
+    width: 100%;
+  }
+  #logo {
+    padding: 2rem;
+  }
+  .plant {
+    height: 40rem;
+    pointer-events: none;
+  }
+
+  .plant1 {
+    z-index: -1;
+  }
+
+  .plant2 {
+    z-index: -2;
+  }
+  .about-text {
+    background: #414141;
+    color: white;
+  }
+  .hero-images {
+    width: 100%;
+  }
+  .about-image {
+    width: 100%;
+  }
+  .contact {
+    width: 90%;
+  }
+  .form-wrapper {
+   width: 60%;
+  }
+.elena{
+width: auto;
+}
+  footer {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 733px) {
+  footer h4 {
+    padding-bottom: 2rem;
+  }
+}
